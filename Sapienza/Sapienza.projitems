@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{FAFAAF6F-C500-4325-BE16-57F3E822AA68}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Sapienza</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)BotPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)LocationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)NewsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)NewsFeed\WebPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)NewsFeed\CellViews\FeedCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ChatView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)BotPage.xaml.cs">
+      <DependentUpon>BotPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)LocationPage.xaml.cs">
+      <DependentUpon>LocationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)NewsPage.xaml.cs">
+      <DependentUpon>NewsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)NewsFeed\myHtmlLabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NewsFeed\WebPage.xaml.cs">
+      <DependentUpon>WebPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)NewsFeed\Interfaces.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NewsFeed\HtmlLabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NewsFeed\ViewModel\RSSFeedViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NewsFeed\FeedItemParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NewsFeed\Network\NetworkManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NewsFeed\Model\FeedItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NewsFeed\CellViews\FeedCell.xaml.cs">
+      <DependentUpon>FeedCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)BindableMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bot\Framework\Activity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bot\Framework\Conversation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bot\Framework\HttpClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bot\Framework\HttpRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bot\Framework\HttpResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bot\Framework\Member.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bot\Framework\Message.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bot\Framework\MessageType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bot\Framework\Response.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bot\Model\MainModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bot\ViewModel\BotMainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ChatView.xaml.cs">
+      <DependentUpon>ChatView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)BotPage2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ChatDataTemplateSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)NewsFeed\" />
+    <Folder Include="$(MSBuildThisFileDirectory)NewsFeed\Model\" />
+    <Folder Include="$(MSBuildThisFileDirectory)NewsFeed\ViewModel\" />
+    <Folder Include="$(MSBuildThisFileDirectory)NewsFeed\Network\" />
+    <Folder Include="$(MSBuildThisFileDirectory)NewsFeed\CellViews\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Bot\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Bot\Framework\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Bot\Model\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Bot\ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Resources\logo.sapienza.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\map.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\news.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\chat.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\about.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\sapienzaback.jpeg" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\white-pin-hi.png" />
+  </ItemGroup>
+</Project>

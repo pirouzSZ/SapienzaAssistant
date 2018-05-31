@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.maps" xmlns:local="clr-namespace:Sapienza" x:Class="Sapienza.LocationPage" Title="Location">
+    <!-- 
+    
+    <local:BindableMap MapType="Street" MapPosition="{Binding MyPosition}" MapPins="{Binding PinCollection}" />
+    -->
+    <ContentPage.Content>
+        
+            <maps:Map x:Name="MainMap" MapType="Hybrid"/>
+ 
+    </ContentPage.Content>
+</ContentPage>

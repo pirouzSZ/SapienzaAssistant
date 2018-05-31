@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Sapienza" x:Class="Sapienza.MainPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Home" BackgroundColor="#77202D" Icon="hamburger.png">
+            <ContentPage.Padding>
+                <OnPlatform x:TypeArguments="Thickness" iOS="20, 40, 0, 0">
+                </OnPlatform>
+            </ContentPage.Padding>
+            <StackLayout Orientation="Vertical">
+                <StackLayout Padding="-28,0,0,2">
+                    <Image Source="/Users/pirouz/Projects/xamarin projects/Sapienza/Sapienza/Resources/logo.sapienza.png" Aspect="Fill" Scale="0.7" />
+                </StackLayout >
+                <StackLayout Orientation="Horizontal" Padding="5" Spacing="20">
+                    <Image Source="/Users/pirouz/Projects/xamarin projects/Sapienza/Sapienza/Resources/news.png" WidthRequest="30" HeightRequest="30" />
+                    <Button Text="NEWS" FontAttributes="Bold" TextColor="White" Clicked="Menu1" VerticalOptions="End" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Padding="5" Spacing="20">
+                    <Image Source="/Users/pirouz/Projects/xamarin projects/Sapienza/Sapienza/Resources/chat.png" WidthRequest="30" HeightRequest="30" />
+                    <Button Text="Ask Me!" FontAttributes="Bold" TextColor="White" Clicked="Menu2" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Padding="5" Spacing="20">
+                    <Image Source="/Users/pirouz/Projects/xamarin projects/Sapienza/Sapienza/Resources/map.png" WidthRequest="30" HeightRequest="30" />
+                    <Button Text="Location" FontAttributes="Bold" TextColor="White" Clicked="Menu3" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Padding="5" Spacing="20">
+                    <Image Source="/Users/pirouz/Projects/xamarin projects/Sapienza/Sapienza/Resources/about.png" WidthRequest="30" HeightRequest="30" />
+                    <Button Text="About Sapienza" FontAttributes="Bold" TextColor="White" Clicked="Menu4" VerticalOptions="End" />
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <ContentPage.Padding>
+                <OnPlatform x:TypeArguments="Thickness" iOS="20, 30, 0, 0">
+                </OnPlatform>
+            </ContentPage.Padding>
+            <ContentPage.Content>
+                <StackLayout>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

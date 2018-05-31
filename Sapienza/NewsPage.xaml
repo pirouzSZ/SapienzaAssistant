@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Sapienza.NewsPage" xmlns:Cell="clr-namespace:Sapienza.NewsFeed.CellViews" Title="NEWS">
+    <Grid x:Name="root">
+        <StackLayout Margin="1" HeightRequest="10">
+            <ListView x:Name="FeedListView" CachingStrategy="RecycleElement" IsPullToRefreshEnabled="True" SelectedItem="" ItemsSource="{Binding FeedList}" IsRefreshing="{Binding IsRefreshing}" RefreshCommand="{Binding RefreshCommand}" HasUnevenRows="true" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Cell:FeedCell>
+                        </Cell:FeedCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <Grid x:Name="web" IsVisible="false" Margin="5,30,5,5">
+            <WebView x:Name="webview" WidthRequest="200" HeightRequest="300" />
+            <Button WidthRequest="30" HeightRequest="30" Text="X" Clicked="Handle_Clicked" HorizontalOptions="Start" BackgroundColor="Teal" VerticalOptions="Start" Opacity="0.7" TextColor="Black" />
+        </Grid>
+    </Grid>
+</ContentPage>
